@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlendViewController">
+            <connections>
+                <outlet property="mainImageView" destination="SVz-bD-W85" id="dGy-o7-gIF"/>
+                <outlet property="view" destination="aeU-Ag-ZCp" id="Icp-ua-hIX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="aeU-Ag-ZCp">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SVz-bD-W85">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                </imageView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80e-Sx-eky">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="4pv-kj-4DB"/>
+                        <constraint firstAttribute="width" constant="375" id="eKM-TW-YY4"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem title="Camera" id="oGQ-d8-pBK">
+                            <connections>
+                                <action selector="takePhotoFromCamera:" destination="-2" id="Vb5-2L-OtZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Album" id="4gi-Pb-mK5">
+                            <connections>
+                                <action selector="takePhotoFromAlbum:" destination="-2" id="fff-wh-7Zt"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="CDT-RW-WcN"/>
+                        <barButtonItem title="Save" id="Psg-ys-spw">
+                            <connections>
+                                <action selector="savePhoto:" destination="-2" id="Kdz-PL-E1M"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="80e-Sx-eky" firstAttribute="top" secondItem="SVz-bD-W85" secondAttribute="bottom" id="7yR-aF-UBE"/>
+                <constraint firstAttribute="bottom" secondItem="80e-Sx-eky" secondAttribute="bottom" id="EoW-eL-736"/>
+                <constraint firstAttribute="trailing" secondItem="SVz-bD-W85" secondAttribute="trailing" id="TPA-sb-fAT"/>
+                <constraint firstItem="SVz-bD-W85" firstAttribute="leading" secondItem="aeU-Ag-ZCp" secondAttribute="leading" id="dfH-Oe-gmW"/>
+                <constraint firstItem="SVz-bD-W85" firstAttribute="top" secondItem="aeU-Ag-ZCp" secondAttribute="top" id="wHn-LY-fgg"/>
+                <constraint firstItem="80e-Sx-eky" firstAttribute="leading" secondItem="SVz-bD-W85" secondAttribute="leading" id="zc5-3l-QUv"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
